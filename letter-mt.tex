@@ -1,0 +1,83 @@
+\documentclass[paper=a4,
+               fontsize=11pt,
+               DIV=17]{scrartcl}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[utf8]{luainputenc}
+\usepackage{fontspec}
+
+% Color definitions
+\definecolor{primaryTextColor}{HTML}{2b2b2b}
+\definecolor{headingsColor}{HTML}{343838}
+\definecolor{descriptColor}{HTML}{7C7C7C}
+\definecolor{contactColor}{HTML}{8C8C8C}
+
+% Font definitions
+\setmainfont[Color=primaryTextColor,%
+             Path=fonts/source-sans-pro/,%
+             BoldItalicFont=SourceSansPro-It,%
+             BoldFont=SourceSansPro-Bold,ItalicFont=SourceSansPro-LightIt]%
+             {SourceSansPro-Light}
+\setsansfont[Scale=MatchLowercase,%
+             Mapping=tex-text,%
+             Path = fonts/source-sans-pro/]%
+             {SourceSansPro-Light}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\usepackage{ngerman}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{blindtext}
+
+\renewcommand{\labelitemi}{$\bullet$}
+
+\begin{document}
+\pagestyle{empty}
+\begin{minipage}{0.6\textwidth}
+\fontsize{43pt}{63pt}%
+\fontspec[Path = fonts/lato/]{Lato-Thin}\selectfont{Markus Theil}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+    \begin{flushright}
+        \color{contactColor}
+        \fontspec[Path = fonts/source-sans-pro/]
+        {SourceSansPro-Regular}
+        \fontsize{11pt}{14pt}
+        \selectfont%
+        Straße 21\\
+        01234 Ort\\
+        \href{mailto:markus.theil@tu-ilmenau.de}{markus.theil@tu-ilmenau.de}
+    \end{flushright}
+\end{minipage}
+\vspace{1ex}
+\color{contactColor}%
+\hrule
+\vspace{1ex}
+{
+\sffamily
+\Large
+\textbf{Überschrift}
+}
+
+\vspace{1ex}
+
+Sehr geehrte Damen und Herren,
+
+\vspace{0.5ex}
+
+\blindtext
+
+\vspace{2em}
+Mit freundlichen Grüßen\\[2ex]
+Markus Theil
+
+\vspace{3em}
+
+\textbf{Anlagen:}
+\begin{itemize}
+	\item A
+	\item B
+\end{itemize}
+\end{document}
