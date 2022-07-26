@@ -14,18 +14,22 @@
 
 % Font definitions
 \setmainfont[Color=primaryTextColor,%
+            Extension      = .otf,%
+            Ligatures      = TeX,%
              Path=fonts/source-sans-pro/,%
              BoldItalicFont=SourceSansPro-It,%
-             BoldFont=SourceSansPro-Bold,ItalicFont=SourceSansPro-LightIt]%
+             BoldFont=SourceSansPro-Bold,
+             ItalicFont=SourceSansPro-LightIt]%
              {SourceSansPro-Light}
 \setsansfont[Scale=MatchLowercase,%
-             Mapping=tex-text,%
+            Extension      = .otf,%
+            Ligatures      = TeX,%
              Path = fonts/source-sans-pro/]%
              {SourceSansPro-Light}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
-\usepackage{ngerman}
+\usepackage[ngerman]{babel}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{blindtext}
@@ -36,13 +40,21 @@
 \pagestyle{empty}
 \begin{minipage}{0.6\textwidth}
 \fontsize{43pt}{63pt}%
-\fontspec[Path = fonts/lato/]{Lato-Thin}\selectfont{Markus Theil}
+\fontspec[%
+    Path = fonts/lato/,%
+    Extension      = .ttf,%
+    Ligatures      = TeX%
+]{Lato-Thin}\selectfont{Markus Theil}
 \end{minipage}
 \hfill
 \begin{minipage}{0.3\textwidth}
     \begin{flushright}
         \color{contactColor}
-        \fontspec[Path = fonts/source-sans-pro/]
+        \fontspec[
+            Path = fonts/source-sans-pro/,%
+            Extension      = .otf,%
+            Ligatures      = TeX%
+        ]
         {SourceSansPro-Regular}
         \fontsize{11pt}{14pt}
         \selectfont%
